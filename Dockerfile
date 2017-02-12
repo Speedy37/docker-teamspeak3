@@ -3,7 +3,7 @@ MAINTAINER Vincent Rouille "vincent@speedy37.fr"
 
 ENV TS3_VERSION 3.0.13.6
 ENV TS3_DIR /opt/teamspeak3-server
-RUN mkdir -p /opt
+RUN mkdir -p /opt \
  && apk add --no-cache curl \
  && curl http://dl.4players.de/ts/releases/$TS3_VERSION/teamspeak3-server_linux-amd64-$TS3_VERSION.tar.gz > /tmp/teamspeak-server.tar.gz \
  && tar -xf /tmp/teamspeak-server.tar.gz \
